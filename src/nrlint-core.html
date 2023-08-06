@@ -343,7 +343,7 @@
 
     RED.plugins.registerPlugin('nrlint', {
         onadd: function() {
-            var lintWorker = new Worker('resources/nrlint/nrlint-worker.js')
+            var lintWorker = new Worker('resources/@vgo-exo/nrlint/nrlint-worker.js')
             lintWorker.onmessage = function(event) {
                 if (event.data.cmd === "result") {
                     displayResult(event.data.result);
